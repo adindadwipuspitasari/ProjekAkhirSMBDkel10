@@ -1,0 +1,37 @@
+<tr>
+                <th> <center>log id</center> </th>
+                <th>id_peminjaman</th>
+                <th>nama_peminjam</th>
+                <th>no_telp</th>
+                <th>inserted_at</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+
+              ?>
+              <tr>
+                <td> <center>
+                  <?php  echo ++$id_log;?>.
+                </center></td>
+                <td>
+                  <?php  echo $result['id_peminjaman'];?>
+                </td>
+                <td>
+                  <?php  echo $result['nama_peminjam'];?>
+                </td>
+                <td>
+                  <?php  echo $result['no_telp'];?>
+                </td>
+                <td>
+                  <?php  echo $result['inserted_at'];?>
+                </td>
+                <td>
+                <center>
+                  <a href="kelola.php?ubah=<?php  echo $result['id_log'];?>" type="button" class="btn btn-success btn-sm">
+                    <i class="fa fa-pencil"></i>
+                  </a>
+                  <a  href="proses.php?hapus=<?php  echo $result['id_log'];?>" type="button" class="btn btn-warning btn-sm" onClick="return confirm('Apakah Anda Yakin Ingin Menghapus??')">
+                    <i class="fa fa-trash"></i>
+                  </a>
+                  </center>
